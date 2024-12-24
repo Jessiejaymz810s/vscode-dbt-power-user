@@ -3,7 +3,6 @@
   // for the documentation about the tasks.json format
   "version": "2.0.0",
   "tasks": [
-    // Based on this comment: https://stackoverflow.com/a/57328332
     {
       "label": "debug-task",
       "type": "npm",
@@ -30,6 +29,15 @@
       "command": "echo ${input:terminate-debug-task}",
       "type": "shell",
       "problemMatcher": []
+    },
+    {
+      "type": "deno",
+      "command": "compile",
+      "problemMatcher": [
+        "$deno"
+      ],
+      "group": "build",
+      "label": "deno: compile"
     }
   ],
   "inputs": [
